@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "direccion": "Dirección 1",
+    "coordenadas": [-24.79024564287792, -65.40210575687009]
+  },
+  {
+    "id": 2,
+    "direccion": "Dirección 2",
+    "coordenadas": [40.7128, -74.0060]
+  },
+  {
+    "id": 3,
+    "direccion": "Dirección 3",
+    "coordenadas": [51.5074, -0.1278]
+  },
+  {
+    "id": 4,
+    "direccion": "Dirección 4",
+    "coordenadas": [34.0522, -118.2437]
+  },
+  {
+    "id": 5,
+    "direccion": "Dirección 5",
+    "coordenadas": [35.6895, 139.6917]
+  },
+  {
+    "id": 6,
+    "direccion": "Dirección 6",
+    "coordenadas": [48.8566, 2.3522]
+  },
+  {
+    "id": 7,
+    "direccion": "Dirección 7",
+    "coordenadas": [-34.6037, -58.3816]
+  },
+  {
+    "id": 8,
+    "direccion": "Dirección 8",
+    "coordenadas": [39.9042, 116.4074]
+  },
+  {
+    "id": 9,
+    "direccion": "Dirección 9",
+    "coordenadas": [48.8566, 2.3522]
+  },
+  {
+    "id": 10,
+    "direccion": "Dirección 10",
+    "coordenadas": [43.8566, 21.3522]
+  }
