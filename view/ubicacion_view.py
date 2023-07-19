@@ -1,3 +1,6 @@
+from controller.ubicacion_controller import UbicacionController
+
+
 class UbicacionView:
     def __init__(self, controller):
         self.controller = controller
@@ -17,7 +20,7 @@ class UbicacionView:
                 f"ID: {ubicacion['id']}, Dirección: {ubicacion['direccion']}, Coordenadas: {ubicacion['coordenadas']}")
 
     def ver_ubicacion_id(self):
-        id_ubicacion = input('Ingrese el ID de la ubicación que desea ver: ')
+        id_ubicacion = int(input('Ingrese el ID de la ubicación que desea ver: '))
         ubicacion = self.controller.ver_items_id(id_ubicacion)
         if ubicacion:
             print(
@@ -29,3 +32,9 @@ class UbicacionView:
         id_ubicacion = input('Ingrese el ID de la ubicación que desea eliminar: ')
         self.controller.eliminar_item_id(id_ubicacion)
         print('Ubicación eliminada con éxito.')
+
+if __name__ == '__main__':
+    ubicacion = UbicacionController('../DAO/JSON/ubicaciones.json')
+    print(ubicacion.ver_items())
+    ubicacion_view = UbicacionView(ubicacion)
+    ubicacion_view.ver_ubicacion_id()
