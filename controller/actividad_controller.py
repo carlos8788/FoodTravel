@@ -4,8 +4,8 @@ from model.actividad import Actividad
 
 class ActividadController(BaseController):
 
-    def crear_item(self, id, nombre, destino_id, hora_inicio):
-        self.actividad = Actividad(id, nombre, destino_id, hora_inicio)
+    def _guardar_item(self, nombre, destino_id, hora_inicio):
+        self.actividad = Actividad(self.id_item(), nombre, destino_id, hora_inicio)
 
         self.items.append(self.actividad.to_dict())
         self.data.save_to_json(self.items)

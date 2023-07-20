@@ -5,9 +5,8 @@ from model.destino_culinario import DestinoCulinario
 
 class DestinoCulinarioController(BaseController):
 
-    def crear_item(
+    def _guardar_item(
             self,
-            id,
             nombre,
             tipo_cocina,
             ingredientes,
@@ -18,7 +17,7 @@ class DestinoCulinarioController(BaseController):
             id_ubicacion,
             imagen):
         destino_culinario =  DestinoCulinario(
-                id,
+                self.id_item(),
                 nombre,
                 tipo_cocina,
                 ingredientes,

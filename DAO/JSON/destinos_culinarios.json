@@ -1,1 +1,157 @@
-[{"id": 1, "nombre": "Trattoria Mamma Mia", "tipo_cocina": "Italiana", "ingredientes": ["pasta", "tomate", "queso"], "precio_minimo": 10.0, "precio_maximo": 30.0, "popularidad": 4.5, "disponibilidad": true, "id_ubicacion": 1, "imagen": "url_imagen_1"}, {"id": 2, "nombre": "El Sombrero", "tipo_cocina": "Mexicana", "ingredientes": ["tortilla", "carne", "pimientos"], "precio_minimo": 8.0, "precio_maximo": 25.0, "popularidad": 4.0, "disponibilidad": true, "id_ubicacion": 2, "imagen": "url_imagen_2"}, {"id": 3, "nombre": "El Faro de Gadir", "tipo_cocina": "Mariscos", "ingredientes": ["langostinos", "pulpo", "almejas"], "precio_minimo": 15.0, "precio_maximo": 45.0, "popularidad": 4.7, "disponibilidad": true, "id_ubicacion": 3, "imagen": "url_imagen_3"}, {"id": 4, "nombre": "Choco Fudge", "tipo_cocina": "Postres", "ingredientes": ["chocolate", "leche"], "precio_minimo": 5.0, "precio_maximo": 15.0, "popularidad": 4.3, "disponibilidad": true, "id_ubicacion": 4, "imagen": "url_imagen_4"}, {"id": 5, "nombre": "Sushi King", "tipo_cocina": "Japonesa", "ingredientes": ["pescado", "arroz"], "precio_minimo": 10.0, "precio_maximo": 40.0, "popularidad": 4.8, "disponibilidad": true, "id_ubicacion": 5, "imagen": "url_imagen_5"}, {"id": 6, "nombre": "Garden Fresh", "tipo_cocina": "Vegana", "ingredientes": ["ensalada", "verduras"], "precio_minimo": 8.0, "precio_maximo": 20.0, "popularidad": 4.2, "disponibilidad": true, "id_ubicacion": 6, "imagen": "url_imagen_6"}, {"id": 7, "nombre": "Parrilla Don Juan", "tipo_cocina": "Parrilla", "ingredientes": ["carne", "verduras"], "precio_minimo": 15.0, "precio_maximo": 50.0, "popularidad": 4.7, "disponibilidad": true, "id_ubicacion": 7, "imagen": "url_imagen_7"}, {"id": 8, "nombre": "Dragon Wok", "tipo_cocina": "China", "ingredientes": ["arroz", "pollo"], "precio_minimo": 10.0, "precio_maximo": 30.0, "popularidad": 4.5, "disponibilidad": true, "id_ubicacion": 8, "imagen": "url_imagen_8"}, {"id": 9, "nombre": "La Baguette", "tipo_cocina": "Francesa", "ingredientes": ["pan", "queso"], "precio_minimo": 8.0, "precio_maximo": 25.0, "popularidad": 4.4, "disponibilidad": true, "id_ubicacion": 9, "imagen": "url_imagen_9"}, {"id": 10, "nombre": "The Royal Indian", "tipo_cocina": "India", "ingredientes": ["arroz", "pollo", "curry"], "precio_minimo": 12.0, "precio_maximo": 28.0, "popularidad": 4.7, "disponibilidad": true, "id_ubicacion": 10, "imagen": "url_imagen_10"}, {"id": "20", "nombre": "Parrilla Guille", "tipo_cocina": "Argentina", "ingredientes": ["Carnes", " quesos", " verduras"], "precio_minimo": 5000.0, "precio_maximo": 30000.0, "popularidad": "5", "disponibilidad": true, "id_ubicacion": "23, 34", "imagen": "parrilla.img"}]
+[
+    {
+        "id": 1,
+        "nombre": "Trattoria Mamma Mia",
+        "tipo_cocina": "Italiana",
+        "ingredientes": [
+            "pasta",
+            "tomate",
+            "queso"
+        ],
+        "precio_minimo": 10.0,
+        "precio_maximo": 30.0,
+        "popularidad": 4.5,
+        "disponibilidad": true,
+        "id_ubicacion": 1,
+        "imagen": "url_imagen_1"
+    },
+    {
+        "id": 2,
+        "nombre": "El Sombrero",
+        "tipo_cocina": "Mexicana",
+        "ingredientes": [
+            "tortilla",
+            "carne",
+            "pimientos"
+        ],
+        "precio_minimo": 8.0,
+        "precio_maximo": 25.0,
+        "popularidad": 4.0,
+        "disponibilidad": true,
+        "id_ubicacion": 2,
+        "imagen": "url_imagen_2"
+    },
+    {
+        "id": 3,
+        "nombre": "El Faro de Gadir",
+        "tipo_cocina": "Mariscos",
+        "ingredientes": [
+            "langostinos",
+            "pulpo",
+            "almejas"
+        ],
+        "precio_minimo": 15.0,
+        "precio_maximo": 45.0,
+        "popularidad": 4.7,
+        "disponibilidad": true,
+        "id_ubicacion": 3,
+        "imagen": "url_imagen_3"
+    },
+    {
+        "id": 4,
+        "nombre": "Choco Fudge",
+        "tipo_cocina": "Postres",
+        "ingredientes": [
+            "chocolate",
+            "leche"
+        ],
+        "precio_minimo": 5.0,
+        "precio_maximo": 15.0,
+        "popularidad": 4.3,
+        "disponibilidad": true,
+        "id_ubicacion": 4,
+        "imagen": "url_imagen_4"
+    },
+    {
+        "id": 5,
+        "nombre": "Sushi King",
+        "tipo_cocina": "Japonesa",
+        "ingredientes": [
+            "pescado",
+            "arroz"
+        ],
+        "precio_minimo": 10.0,
+        "precio_maximo": 40.0,
+        "popularidad": 4.8,
+        "disponibilidad": true,
+        "id_ubicacion": 5,
+        "imagen": "url_imagen_5"
+    },
+    {
+        "id": 6,
+        "nombre": "Garden Fresh",
+        "tipo_cocina": "Vegana",
+        "ingredientes": [
+            "ensalada",
+            "verduras"
+        ],
+        "precio_minimo": 8.0,
+        "precio_maximo": 20.0,
+        "popularidad": 4.2,
+        "disponibilidad": true,
+        "id_ubicacion": 6,
+        "imagen": "url_imagen_6"
+    },
+    {
+        "id": 7,
+        "nombre": "Parrilla Don Juan",
+        "tipo_cocina": "Parrilla",
+        "ingredientes": [
+            "carne",
+            "verduras"
+        ],
+        "precio_minimo": 15.0,
+        "precio_maximo": 50.0,
+        "popularidad": 4.7,
+        "disponibilidad": true,
+        "id_ubicacion": 7,
+        "imagen": "url_imagen_7"
+    },
+    {
+        "id": 8,
+        "nombre": "Dragon Wok",
+        "tipo_cocina": "China",
+        "ingredientes": [
+            "arroz",
+            "pollo"
+        ],
+        "precio_minimo": 10.0,
+        "precio_maximo": 30.0,
+        "popularidad": 4.5,
+        "disponibilidad": true,
+        "id_ubicacion": 8,
+        "imagen": "url_imagen_8"
+    },
+    {
+        "id": 9,
+        "nombre": "La Baguette",
+        "tipo_cocina": "Francesa",
+        "ingredientes": [
+            "pan",
+            "queso"
+        ],
+        "precio_minimo": 8.0,
+        "precio_maximo": 25.0,
+        "popularidad": 4.4,
+        "disponibilidad": true,
+        "id_ubicacion": 9,
+        "imagen": "url_imagen_9"
+    },
+    {
+        "id": 10,
+        "nombre": "The Royal Indian",
+        "tipo_cocina": "India",
+        "ingredientes": [
+            "arroz",
+            "pollo",
+            "curry"
+        ],
+        "precio_minimo": 12.0,
+        "precio_maximo": 28.0,
+        "popularidad": 4.7,
+        "disponibilidad": true,
+        "id_ubicacion": 10,
+        "imagen": "url_imagen_10"
+    }
+
+]
