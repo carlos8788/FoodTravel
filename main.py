@@ -11,7 +11,7 @@ class Main():
         self.destino_culinario_controller = DestinoCulinarioController('DAO/JSON/destinos_culinarios.json')
         self.ubicacion_view = UbicacionView(self.ubicacion_controller)
         self.destino_culinario_view = DestinoCulinarioView(self.destino_culinario_controller)
-        MainWindow(self.ubicacion_view, self.destino_culinario_view, )
+        MainWindow(self.ubicacion_view, self.destino_culinario_view)
 
 if __name__ == "__main__":
     Main()

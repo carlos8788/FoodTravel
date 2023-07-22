@@ -17,12 +17,12 @@
     },
     {
         "id": 2,
-        "nombre": "El Sombrero",
-        "tipo_cocina": "Mexicana",
+        "nombre": "El Charrua",
+        "tipo_cocina": "Argentina",
         "ingredientes": [
-            "tortilla",
+            "pastas",
             "carne",
-            "pimientos"
+            "mariscos"
         ],
         "precio_minimo": 8.0,
         "precio_maximo": 25.0,
@@ -33,12 +33,12 @@
     },
     {
         "id": 3,
-        "nombre": "El Faro de Gadir",
-        "tipo_cocina": "Mariscos",
+        "nombre": "La Fiamma",
+        "tipo_cocina": "Italiana",
         "ingredientes": [
-            "langostinos",
-            "pulpo",
-            "almejas"
+            "pizzas",
+            "pastas",
+            "carnes"
         ],
         "precio_minimo": 15.0,
         "precio_maximo": 45.0,
@@ -49,11 +49,12 @@
     },
     {
         "id": 4,
-        "nombre": "Choco Fudge",
-        "tipo_cocina": "Postres",
+        "nombre": "Pizza Salta Pueyrredon",
+        "tipo_cocina": "Italiana",
         "ingredientes": [
-            "chocolate",
-            "leche"
+            "Pizzas",
+            "Calzones",
+            "Empanadas"
         ],
         "precio_minimo": 5.0,
         "precio_maximo": 15.0,
@@ -64,11 +65,11 @@
     },
     {
         "id": 5,
-        "nombre": "Sushi King",
-        "tipo_cocina": "Japonesa",
+        "nombre": "La Criollita",
+        "tipo_cocina": "Argentina",
         "ingredientes": [
-            "pescado",
-            "arroz"
+            "Carnes",
+            "Pastas"
         ],
         "precio_minimo": 10.0,
         "precio_maximo": 40.0,
@@ -79,11 +80,11 @@
     },
     {
         "id": 6,
-        "nombre": "Garden Fresh",
-        "tipo_cocina": "Vegana",
+        "nombre": "Mostaza",
+        "tipo_cocina": "Argentina",
         "ingredientes": [
-            "ensalada",
-            "verduras"
+            "Hamburguesas",
+            "Hamburguesas veganas"
         ],
         "precio_minimo": 8.0,
         "precio_maximo": 20.0,
@@ -153,5 +154,4 @@
         "id_ubicacion": 10,
         "imagen": "url_imagen_10"
     }
-
 ]

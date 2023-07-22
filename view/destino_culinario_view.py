@@ -11,8 +11,9 @@ class DestinoCulinarioView:
         precio_maximo = float(input('Ingrese el precio máximo: '))
         popularidad = input('Ingrese la popularidad: ')
         disponibilidad = bool(input('Ingrese la disponibilidad (True/False): '))
-        id_ubicacion = int(input('Ingrese el ID de ubicación: '))
         imagen = input('Ingrese la URL de la imagen: ')
+        coord = input('Ingrese la URL de la imagen: ')
+        direccion = input('Ingrese la URL de la imagen: ')
 
         self.controller.crear_item(id, nombre, tipo_cocina, ingredientes)
         print(f'Destino culinario creado con éxito.')

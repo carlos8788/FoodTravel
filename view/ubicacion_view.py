@@ -13,11 +13,13 @@ class UbicacionView:
         self.controller.crear_item(id_ubicacion, direccion, coordenadas, )
         print(f'Ubicación creada con éxito.')
 
-    def ver_ubicaciones(self):
+    def ver_ubicaciones(self, map):
         ubicaciones = self.controller.ver_items()
         for ubicacion in ubicaciones:
-            print(
-                f"ID: {ubicacion['id']}, Dirección: {ubicacion['direccion']}, Coordenadas: {ubicacion['coordenadas']}")
+            map.set_marker(ubicacion['coordenadas'][0], ubicacion['coordenadas'][1], text=ubicacion['direccion'])
+            # map.com
+
+
 
     def ver_ubicacion_id(self):
         id_ubicacion = int(input('Ingrese el ID de la ubicación que desea ver: '))
