@@ -1,16 +1,23 @@
 import tkinter as tk
-from view.tkinter_map import TkinterMapView
+from .frames.frame_1 import Frame1
+from .frames.frame_2 import Frame2
 class Body:
-    def __init__(self, main_frame, PRIMARY_COLOR, THIRD_COLOR):
-
+    def __init__(self, main_frame, PRIMARY_COLOR, THIRD_COLOR, SECONDARY_COLOR, SECONDARY_FONT):
+        self.frames = []
+        self.frames_footer = []
+        self.current_frame_index = 0
         self.THIRD_COLOR = THIRD_COLOR
+        self.PRIMARY_COLOR = PRIMARY_COLOR
+        self.THIRD_COLOR = THIRD_COLOR
+        self.SECONDARY_FONT = SECONDARY_FONT
+        self.SECONDARY_COLOR = SECONDARY_COLOR
 
         self.frame_body = tk.Frame(main_frame, background=PRIMARY_COLOR)
         self.frame_body.grid_rowconfigure(0, weight=1)
         self.frame_body.grid(row=1, column=0, sticky="nsew")
 
         self.frame_body_left = tk.Frame(self.frame_body, width=200, background=PRIMARY_COLOR)
-        self.frame_body_left(self.frame_body_left)
+        self._config_frame_body(self.frame_body_left)
         self.frame_body_left.grid(row=0, column=0, sticky="nsew")
 
         self.frame_body_center = tk.Frame(self.frame_body)
@@ -29,8 +36,8 @@ class Body:
             borderwidth=0,
             relief="ridge",
             font='Arial 35',
-            background=PRIMARY_COLOR,
-            activebackground=PRIMARY_COLOR,
+            background=self.PRIMARY_COLOR,
+            activebackground=self.PRIMARY_COLOR,
         )
         self.boton_anterior.grid(row=0, column=0)
 
@@ -49,23 +56,22 @@ class Body:
         self.boton_siguiente.grid(row=0, column=0)
 
         ## FRAMES
-        frame1 = tk.Frame(self.frame_body_center, width=1200, height=600, background=PRIMARY_COLOR)
-        self._config_frame_body(frame1)
-        self.map_view = TkinterMapView(frame1, tk)
+        frame1 = Frame1(
+            self.PRIMARY_COLOR,
+            self.THIRD_COLOR,
+            self.SECONDARY_FONT, 
+            self.SECONDARY_COLOR,
+            self.frame_body_center,
+            self._config_frame_body
+            )
 
-        frame2 = tk.Frame(self.frame_body_center, width=1200, height=600, bg="green")
-        self._config_frame_body(frame2)
-        etiqueta2 = tk.Label(frame2, text="Contenido del frame 2")
-        etiqueta2.grid(row=1, column=1)
+        frame2 = Frame2(self.frame_body_center, self._config_frame_body)
 
-        frame3 = tk.Frame(self.frame_body_center, width=1200, height=600, bg="blue")
-        self._config_frame_body(frame3)
-        etiqueta3 = tk.Label(frame3, text="Contenido del frame 3")
-        etiqueta3.grid(row=1, column=1)
-
-        self.frames = [frame1, frame2, frame3]
+        self.frames = [frame1.get_frame(), frame2.get_frame()]
         self.current_frame = self.frames[self.current_frame_index]
-        self.current_frame.grid(row=1, column=1, sticky="nsew")
+        self.current_frame.grid(row=0, column=0, sticky="nsew")
+
+       
 
     def _config_frame_body(self, frame_config):
         frame_config.grid_propagate(False)
@@ -78,18 +84,10 @@ class Body:
         self.current_frame = self.frames[self.current_frame_index]
         self.current_frame.grid(row=0, column=0, sticky="nsew")
 
-        self.current_frame_footer.grid_remove()
-        self.current_frame_footer = self.frames_footer[self.current_frame_index]
-        self.current_frame_footer.grid(row=2, column=0, sticky="nsew", pady=5)
-
     def _prev_frame(self):
         self.current_frame.grid_remove()
-        self.current_frame_footer.grid_remove()
         self.current_frame_index = (self.current_frame_index - 1) % len(self.frames)
-
         self.current_frame = self.frames[self.current_frame_index]
         self.current_frame.grid(row=0, column=0, sticky="nsew")
-        self.current_frame_footer = self.frames_footer[self.current_frame_index]
-        self.current_frame_footer.grid(row=2, column=0, sticky="nsew", pady=5)
 
 

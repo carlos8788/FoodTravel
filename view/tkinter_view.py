@@ -1,15 +1,12 @@
 import tkinter as tk
-import customtkinter as ctk
-
 from view.components.header import Header
+from view.components.body import Body
+
 class MainWindow:
     def __init__(self, ubicacion_view, destino_view):
         self.ubicacion_view = ubicacion_view
         self.destino_view = destino_view
-        self.frames = []
-        self.frames_footer = []
-
-        self.current_frame_index = 0
+        
         self.app()
 
     def app(self):
@@ -35,16 +32,22 @@ class MainWindow:
 
 
         ### HEADER
-        self.header = Header(
-            self.main_frame,
-            self.PRIMARY_COLOR,
-            self.PRIMARY_FONT,
-            self.SECONDARY_COLOR,
-            self.WIDTH)
+        # self.header = Header(
+        #     self.main_frame,
+        #     self.PRIMARY_COLOR,
+        #     self.PRIMARY_FONT,
+        #     self.SECONDARY_COLOR,
+        #     self.WIDTH)
 
 
         ### BODY
-
+        self.body = Body(
+            self.main_frame,
+            self.PRIMARY_COLOR,
+            self.THIRD_COLOR,
+            self.SECONDARY_COLOR,
+            self.SECONDARY_FONT
+        )
 
         ## FOOTER
 
@@ -54,5 +57,5 @@ class MainWindow:
 
     ## CONFIG FRAMES
 
-
+    
 
