@@ -1,6 +1,9 @@
 import tkinter as tk
 from .frames.frame_1 import Frame1
 from .frames.frame_2 import Frame2
+from .frames.frame_3 import Frame3
+
+
 class Body:
     def __init__(self, main_frame, PRIMARY_COLOR, THIRD_COLOR, SECONDARY_COLOR, SECONDARY_FONT):
         self.frames = []
@@ -16,7 +19,7 @@ class Body:
         self.frame_body.grid_rowconfigure(0, weight=1)
         self.frame_body.grid(row=1, column=0, sticky="nsew")
 
-        self.frame_body_left = tk.Frame(self.frame_body, width=200, background=PRIMARY_COLOR)
+        self.frame_body_left = tk.Frame(self.frame_body, width=100, background=PRIMARY_COLOR)
         self._config_frame_body(self.frame_body_left)
         self.frame_body_left.grid(row=0, column=0, sticky="nsew")
 
@@ -24,7 +27,7 @@ class Body:
         self.frame_body_center.grid_rowconfigure(0, weight=1)
         self.frame_body_center.grid(row=0, column=1, sticky="nsew")
 
-        self.frame_body_right = tk.Frame(self.frame_body, width=200, background=PRIMARY_COLOR)
+        self.frame_body_right = tk.Frame(self.frame_body, width=100, background=PRIMARY_COLOR)
         self._config_frame_body(self.frame_body_right)
         self.frame_body_right.grid(row=0, column=2, sticky="nsew")
 
@@ -65,9 +68,21 @@ class Body:
             self._config_frame_body
             )
 
-        frame2 = Frame2(self.frame_body_center, self._config_frame_body)
+        frame2 = Frame2(
+            self.PRIMARY_COLOR,
+            self.THIRD_COLOR,
+            self.SECONDARY_FONT,
+            self.SECONDARY_COLOR,
+            self.frame_body_center,
+            self._config_frame_body
+        )
+        frame3 = Frame3(
+            self.frame_body_center,
+            self.SECONDARY_FONT,
+        )
 
-        self.frames = [frame1.get_frame(), frame2.get_frame()]
+
+        self.frames = [frame1.get_frame(), frame2.get_frame(), frame3.get_frame()]
         self.current_frame = self.frames[self.current_frame_index]
         self.current_frame.grid(row=0, column=0, sticky="nsew")
 

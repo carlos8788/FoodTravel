@@ -12,6 +12,7 @@ class Header:
             text="Acá va el titulo principal",
             background=PRIMARY_COLOR,
             font=PRIMARY_FONT,
-            foreground=SECONDARY_COLOR
+            foreground=SECONDARY_COLOR,
+            justify=tk.CENTER
         )
-        self.label.grid(row=0, column=0, columnspan=3, sticky='ew')
+        self.label.grid(row=0, column=0, columnspan=3)

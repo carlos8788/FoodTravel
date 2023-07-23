@@ -11,13 +11,13 @@ class MainWindow:
 
     def app(self):
         #VARIABLES
-        self.WIDTH = 1600
-        self.HEIGHT = 850
+        self.WIDTH = 1000
+        self.HEIGHT = 600
         self.PRIMARY_COLOR = '#525869'
         self.SECONDARY_COLOR = '#f5f5f5'
         self.THIRD_COLOR = '#4682b4'
         self.PRIMARY_FONT = ('Arial Baltic', 20, 'bold')
-        self.SECONDARY_FONT = ('Arial Baltic', 20)
+        self.SECONDARY_FONT = ('Arial Baltic', 16)
 
 
         #ROOT
@@ -32,12 +32,12 @@ class MainWindow:
 
 
         ### HEADER
-        # self.header = Header(
-        #     self.main_frame,
-        #     self.PRIMARY_COLOR,
-        #     self.PRIMARY_FONT,
-        #     self.SECONDARY_COLOR,
-        #     self.WIDTH)
+        self.header = Header(
+            self.main_frame,
+            self.PRIMARY_COLOR,
+            self.PRIMARY_FONT,
+            self.SECONDARY_COLOR,
+            self.WIDTH)
 
 
         ### BODY

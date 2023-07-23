@@ -1,4 +1,48 @@
-frame3 = tk.Frame(self.frame_body_center, width=1200, height=600, bg="blue")
-        self._config_frame_body(frame3)
-        etiqueta3 = tk.Label(frame3, text="Contenido del frame 3")
-        etiqueta3.grid(row=1, column=1)
+import tkinter as tk
+from PIL import Image, ImageTk
+from pathlib import Path
+import os
+
+class Frame3:
+    def __init__(self, root, SECONDARY_FONT):
+        self.SECONDARY_FONT = SECONDARY_FONT
+        self.BASE = Path(__file__).resolve().parent
+        self.frame = tk.Frame(root, width=800, height=600)
+        self.canvas = tk.Canvas(self.frame, width=800, height=450)
+        self.canvas.pack(fill='both', expand=True)
+        img = Image.open(os.path.join(self.BASE, 'img/salta.png'))
+        self.background_image = ImageTk.PhotoImage(img)
+        self.canvas.create_image(0, 0, anchor='nw', image=self.background_image)
+        self.canvas.image = self.background_image
+
+        self.button1 = tk.Button(
+            self.frame,
+            text='Button 1',
+            borderwidth=0,
+            relief='ridge',
+            width=16,
+            font=self.SECONDARY_FONT
+        )
+        self.button2 = tk.Button(
+            self.frame,
+            text='Button 2',
+            borderwidth=0,
+            relief='ridge',
+            width=16,
+            font=self.SECONDARY_FONT
+        )
+        self.button3 = tk.Button(
+            self.frame,
+            text='Button 3',
+            borderwidth=0,
+            relief='ridge',
+            width=16,
+            font=self.SECONDARY_FONT
+        )
+
+        # Add buttons to canvas
+        self.canvas.create_window(190, 400, window=self.button1)
+        self.canvas.create_window(410, 400, window=self.button2)
+        self.canvas.create_window(630, 400, window=self.button3)
+    def get_frame(self):
+        return self.frame
