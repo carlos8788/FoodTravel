@@ -23,13 +23,8 @@ class DestinoCulinarioView:
         for destino in destinos_culinarios:
             print(f"ID: {destino['id']}, Nombre: {destino['nombre']}, Tipo de cocina: {destino['tipo_cocina']}")
 
-    def ver_destino_culinario_id(self):
-        id_destino = int(input('Ingrese el ID del destino culinario que desea ver: '))
-        destino = self.controller.ver_items_id(id_destino)
-        if destino:
-            print(f"ID: {destino['id']}, Nombre: {destino['nombre']}, Tipo de cocina: {destino['tipo_cocina']}")
-        else:
-            print('El destino culinario con el ID proporcionado no existe.')
+    def ver_destino_culinario_id(self, id_destino):
+        return self.controller.ver_items_id(id_destino)
 
     def eliminar_destino_culinario(self):
         id_destino = int(input('Ingrese el ID del destino culinario que desea eliminar: '))

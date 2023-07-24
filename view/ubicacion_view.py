@@ -1,4 +1,5 @@
 from controller.ubicacion_controller import UbicacionController
+from view.top_level import PopupImage
 
 
 class UbicacionView:
@@ -13,13 +14,18 @@ class UbicacionView:
         self.controller.crear_item(id_ubicacion, direccion, coordenadas, )
         print(f'Ubicación creada con éxito.')
 
-    def ver_ubicaciones(self, map):
+    def ver_ubicaciones(self, frame, map, destino_culinario):
         ubicaciones = self.controller.ver_items()
+
         for ubicacion in ubicaciones:
-            map.set_marker(ubicacion['coordenadas'][0], ubicacion['coordenadas'][1], text=ubicacion['direccion'])
-            # map.com
-
-
+            destino_img = destino_culinario.ver_destino_culinario_id(ubicacion['id'])
+            print(destino_img)
+            map.set_marker(
+                ubicacion['coordenadas'][0],
+                ubicacion['coordenadas'][1],
+                text=ubicacion['direccion'],
+                command=lambda x, img=destino_img['imagen']: PopupImage(frame, img)
+            )
 
     def ver_ubicacion_id(self):
         id_ubicacion = int(input('Ingrese el ID de la ubicación que desea ver: '))

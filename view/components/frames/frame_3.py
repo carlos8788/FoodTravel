@@ -2,12 +2,13 @@ import tkinter as tk
 from PIL import Image, ImageTk
 from pathlib import Path
 import os
+import view.config as cf
 
 class Frame3:
-    def __init__(self, root, SECONDARY_FONT):
-        self.SECONDARY_FONT = SECONDARY_FONT
+    def __init__(self, main_frame):
+        self.main_frame = main_frame
         self.BASE = Path(__file__).resolve().parent
-        self.frame = tk.Frame(root, width=800, height=600)
+        self.frame = tk.Frame(self.main_frame, width=800, height=600)
         self.canvas = tk.Canvas(self.frame, width=800, height=450)
         self.canvas.pack(fill='both', expand=True)
         img = Image.open(os.path.join(self.BASE, 'img/salta.png'))
@@ -21,7 +22,7 @@ class Frame3:
             borderwidth=0,
             relief='ridge',
             width=16,
-            font=self.SECONDARY_FONT
+            font=cf.SECONDARY_FONT
         )
         self.button2 = tk.Button(
             self.frame,
@@ -29,7 +30,7 @@ class Frame3:
             borderwidth=0,
             relief='ridge',
             width=16,
-            font=self.SECONDARY_FONT
+            font=cf.SECONDARY_FONT
         )
         self.button3 = tk.Button(
             self.frame,
@@ -37,7 +38,7 @@ class Frame3:
             borderwidth=0,
             relief='ridge',
             width=16,
-            font=self.SECONDARY_FONT
+            font=cf.SECONDARY_FONT
         )
 
         # Add buttons to canvas

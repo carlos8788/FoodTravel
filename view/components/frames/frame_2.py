@@ -1,29 +1,24 @@
 from tkinter import Frame, Button, Label, Canvas
-from PIL import Image, ImageTk
-from pathlib import Path
-import os
+import view.config as cf
 
 
 class Frame2:
-        def __init__(self, PRIMARY_COLOR, THIRD_COLOR, SECONDARY_FONT, SECONDARY_COLOR, frame_root, _config_frame_body) -> None:
-            self.PRIMARY_COLOR = PRIMARY_COLOR
-            self.THIRD_COLOR = THIRD_COLOR
-            self.SECONDARY_COLOR = SECONDARY_COLOR
-            self.SECONDARY_FONT = SECONDARY_FONT
-            self.frame_root = frame_root
+        def __init__(self, main_frame, _config_frame_body) -> None:
+
+            self.main_frame = main_frame
             self._config_frame_body = _config_frame_body
-            self.frame2 = Frame(self.frame_root, width=800, height=500, background='red',)
+            self.frame2 = Frame(self.main_frame, width=800, height=500, background='red', )
             self._config_frame_body(self.frame2)
-            footer1 = Frame(self.frame2, background=self.PRIMARY_COLOR)
+            footer1 = Frame(self.frame2, background=cf.PRIMARY_COLOR)
 
             footer1.grid(row=1, column=0, columnspan=3, sticky='nsew')
 
             self.button1 = Button(
                 footer1,
                 text="A",
-                background=self.THIRD_COLOR,
-                font=self.SECONDARY_FONT,
-                foreground=self.SECONDARY_COLOR,
+                background=cf.THIRD_COLOR,
+                font=cf.SECONDARY_FONT,
+                foreground=cf.SECONDARY_COLOR,
                 borderwidth=0,
                 relief='ridge',
                 width=16
@@ -36,9 +31,9 @@ class Frame2:
             self.button2 = Button(
                 footer1,
                 text="B",
-                background=self.THIRD_COLOR,
-                font=self.SECONDARY_FONT,
-                foreground=self.SECONDARY_COLOR,
+                background=cf.THIRD_COLOR,
+                font=cf.SECONDARY_FONT,
+                foreground=cf.SECONDARY_COLOR,
                 borderwidth=0,
                 relief='ridge',
                 width=16
@@ -51,9 +46,9 @@ class Frame2:
             self.button3 = Button(
                 footer1,
                 text="C",
-                background=self.THIRD_COLOR,
-                font=self.SECONDARY_FONT,
-                foreground=self.SECONDARY_COLOR,
+                background=cf.THIRD_COLOR,
+                font=cf.SECONDARY_FONT,
+                foreground=cf.SECONDARY_COLOR,
                 borderwidth=0,
                 relief='ridge',
                 width=16
@@ -81,7 +76,7 @@ class Frame2:
             event.widget['background'] = '#191970'
 
         def _change_to_original(self, event):
-            event.widget['background'] = self.THIRD_COLOR
+            event.widget['background'] = cf.THIRD_COLOR
 
         def get_frame(self):
             return self.frame2

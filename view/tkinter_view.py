@@ -32,6 +32,7 @@ class MainWindow:
         self.body = Body(
             self.main_frame,
             self.ubicacion_view,
+            self.destino_view
         )
 
         ## FOOTER
