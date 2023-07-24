@@ -8,8 +8,8 @@ class Frame3:
     def __init__(self, main_frame):
         self.main_frame = main_frame
         self.BASE = Path(__file__).resolve().parent
-        self.frame = tk.Frame(self.main_frame, width=800, height=600)
-        self.canvas = tk.Canvas(self.frame, width=800, height=450)
+        self.frame = tk.Frame(self.main_frame, width=800, height=450, pady=5, background=cf.PRIMARY_COLOR)
+        self.canvas = tk.Canvas(self.frame, width=800, height=450, )
         self.canvas.pack(fill='both', expand=True)
         img = Image.open(os.path.join(self.BASE, 'img/salta.png'))
         self.background_image = ImageTk.PhotoImage(img)

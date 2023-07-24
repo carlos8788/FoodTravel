@@ -7,7 +7,7 @@ class Frame2:
 
             self.main_frame = main_frame
             self._config_frame_body = _config_frame_body
-            self.frame2 = Frame(self.main_frame, width=800, height=500, background='red', )
+            self.frame2 = Frame(self.main_frame, width=800, height=450, background='red', )
             self._config_frame_body(self.frame2)
             footer1 = Frame(self.frame2, background=cf.PRIMARY_COLOR)
 

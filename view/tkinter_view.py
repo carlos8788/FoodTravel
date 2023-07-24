@@ -1,4 +1,6 @@
 import tkinter as tk
+
+from view.components.footer import Footer
 from view.components.header import Header
 from view.components.body import Body
 import view.config as cf
@@ -37,11 +39,11 @@ class MainWindow:
 
         ## FOOTER
 
-
+        self.footer = Footer(self.main_frame)
 
         self.root.mainloop()
 
-    ## CONFIG FRAMES
+
 
     
 

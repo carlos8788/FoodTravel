@@ -1,7 +1,6 @@
 from controller.ubicacion_controller import UbicacionController
 from view.top_level import PopupImage
 
-
 class UbicacionView:
     def __init__(self, controller):
         self.controller = controller
@@ -19,7 +18,6 @@ class UbicacionView:
 
         for ubicacion in ubicaciones:
             destino_img = destino_culinario.ver_destino_culinario_id(ubicacion['id'])
-            print(destino_img)
             map.set_marker(
                 ubicacion['coordenadas'][0],
                 ubicacion['coordenadas'][1],

@@ -23,7 +23,7 @@ class Frame1:
             self.frame1 = Frame(
                 self.frame_root,
                 width=800,
-                height=500,
+                height=450,
                 background=cf.PRIMARY_COLOR
             )
             self._config_frame_body(self.frame1)
@@ -47,7 +47,7 @@ class Frame1:
             self.map_widget.set_position(-24.790245, -65.4021057)
             self.map_widget.set_zoom(13)
             self.change_map()
-            self.map_widget.set_marker(-24.790245, -65.4021057, command=lambda x: PopupImage(self.frame_root,'img\salta.png'))
+            # self.map_widget.set_marker(-24.790245, -65.4021057, command=lambda x: PopupImage(self.frame_root,'img\salta.png'))
             self.ubicacion_view.ver_ubicaciones(self.frame_root, self.map_widget, self.destino_view)
 
             footer1 = Frame(self.frame1, background=cf.PRIMARY_COLOR)
