@@ -47,9 +47,11 @@ class Frame1:
             self.map_widget.set_position(-24.790245, -65.4021057)
             self.map_widget.set_zoom(13)
             self.change_map()
-            # self.map_widget.set_marker(-24.790245, -65.4021057, command=lambda x: PopupImage(self.frame_root,'img\salta.png'))
+
+
             self.ubicacion_view.ver_ubicaciones(self.frame_root, self.map_widget, self.destino_view)
 
+            # Footer
             footer1 = Frame(self.frame1, background=cf.PRIMARY_COLOR)
             footer1.grid(row=1, column=0)
 
@@ -72,7 +74,7 @@ class Frame1:
 
             self.button2 = Button(
                 footer1,
-                text="Mostrar lista de UB",
+                text="Cambiar mapa",
                 background=cf.THIRD_COLOR,
                 font=cf.SECONDARY_FONT,
                 foreground=cf.SECONDARY_COLOR,
@@ -93,7 +95,7 @@ class Frame1:
                 foreground=cf.SECONDARY_COLOR,
                 borderwidth=0,
                 relief='ridge',
-                width=16
+                width=16,
             )
 
             self.button3.bind("<Enter>", self._change_to_red)

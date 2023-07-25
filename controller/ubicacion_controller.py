@@ -9,7 +9,3 @@ class UbicacionController(BaseController):
         self.data.save_to_json(self.items)
         return self.items
 
-if __name__ == '__main__':
-    ubicacion = UbicacionController('ub.json')
-    ubicacion.crear_item('sasd', [1, 2])
-    print(ubicacion.ver_items())

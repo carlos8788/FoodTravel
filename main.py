@@ -11,7 +11,6 @@ class Main():
         self.BASE_DIR = Path(__file__).resolve().parent
         self.dir_destinos_culinarios = os.path.join(self.BASE_DIR, 'DAO/JSON/ubicaciones.json')
         self.dir_ubicaiones = os.path.join(self.BASE_DIR, 'DAO/JSON/destinos_culinarios.json')
-
         self.ubicacion_controller = UbicacionController(self.dir_destinos_culinarios)
         self.destino_culinario_controller = DestinoCulinarioController(self.dir_ubicaiones)
         self.ubicacion_view = UbicacionView(self.ubicacion_controller)

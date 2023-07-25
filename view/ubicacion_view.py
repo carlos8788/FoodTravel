@@ -6,11 +6,10 @@ class UbicacionView:
         self.controller = controller
 
     def crear_ubicacion(self):
-        id_ubicacion = input('Ingrese el ID de la ubicación: ')
         direccion = input('Ingrese la dirección: ')
         coordenadas = input('Ingrese las coordenadas (en formato "lat,long"): ').split(',')
 
-        self.controller.crear_item(id_ubicacion, direccion, coordenadas, )
+        self.controller.crear_item(direccion, coordenadas)
         print(f'Ubicación creada con éxito.')
 
     def ver_ubicaciones(self, frame, map, destino_culinario):

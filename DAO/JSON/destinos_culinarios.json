@@ -83,8 +83,9 @@
         "nombre": "Empanadas el Guille",
         "tipo_cocina": "Argentina",
         "ingredientes": [
-            "Hamburguesas",
-            "Hamburguesas veganas"
+            "Empandas de pollo",
+            "carne",
+            "queso"
         ],
         "precio_minimo": 8.0,
         "precio_maximo": 20.0,
